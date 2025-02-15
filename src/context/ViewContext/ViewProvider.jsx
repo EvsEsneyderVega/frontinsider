@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { ViewContext } from "./ViewContext"
 
-export const ViewProvider = ({Children}) => {
+export const ViewProvider = ({children}) => {
     const [vista, setVista] = useState("")
     return (
     <ViewContext.Provider value={{vista,setVista}}>
-        {Children}
+        {children}
     </ViewContext.Provider>
   )
 }
